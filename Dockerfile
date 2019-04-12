@@ -22,8 +22,6 @@ RUN set -x \
   && rm -rf /var/cache/apk/* /root/.node-gyp /usr/share/man /tmp/* \
   && echo
 
-ENTRYPOINT ["/usr/bin/dumb-init"]
-
 RUN npm --version
 RUN npm install forever -g
 
