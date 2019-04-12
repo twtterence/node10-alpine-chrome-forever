@@ -25,4 +25,4 @@ RUN set -x \
 RUN npm --version
 RUN npm install forever -g
 
-CMD ["bash"]
+CMD ["node"]
