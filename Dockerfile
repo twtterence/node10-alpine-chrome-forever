@@ -13,8 +13,8 @@ RUN set -x \
   \
   # Add the packages
   && apk add --no-cache dumb-init curl make gcc g++ python linux-headers binutils-gold gnupg libstdc++ nss chromium \
-  \
-  && npm install puppeteer@1.12.1 \
+  #
+  #&& npm install puppeteer@1.12.1 \
   \
   # Do some cleanup
   && apk del --no-cache make gcc g++ python binutils-gold gnupg libstdc++ \
