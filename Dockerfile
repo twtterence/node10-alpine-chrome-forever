@@ -3,6 +3,8 @@ FROM node:10.15.3-alpine
 ENV CHROME_BIN="/usr/bin/chromium-browser"\
     PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 
+RUN apk add --no-cache bash
+
 RUN set -x \
   && apk update \
   && apk upgrade \
@@ -25,4 +27,4 @@ RUN set -x \
 RUN npm --version
 RUN npm install forever -g
 
-CMD ["node"]
+CMD ["bash"]
